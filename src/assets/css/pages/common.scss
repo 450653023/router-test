@@ -1,0 +1,16 @@
+html,body {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    &:hover,
+    &:active {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+.hide {
+    display: none;
+}

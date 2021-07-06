@@ -1,0 +1,13 @@
+@import '../base/mixin';
+
+.page-qq-baike {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-bottom: 60px;
+    background: #F7FAFA;
+
+    .bottomspace {
+        margin-bottom: 8px;
+    }
+}

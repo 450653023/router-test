@@ -1,0 +1,10 @@
+@import '../base/variable';
+
+.mod-title {
+    height: 40px;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    color: $text01;
+    font-family: PingFangSC-Medium;
+}

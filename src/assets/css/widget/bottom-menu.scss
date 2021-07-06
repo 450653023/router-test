@@ -1,0 +1,73 @@
+@import '../base/variable';
+
+.bottom-menu {
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    background: #ffffff;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+
+    &::before {
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        transform: scaleY(0.5);
+        border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .menu-item {
+        flex: 1;
+        display: flex;
+        color: $text04;
+        font-size: 12px;
+        text-align: center;
+        padding-top: 7.5px;
+        padding-bottom: 7.5px;
+        flex-direction: column;
+
+        .iconfont {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+
+        .icon-dianzan {
+            display: inline-block;
+        }
+
+        .icon-dianzan2 {
+            display: none;
+        }
+
+        .icon-shoucang {
+            display: inline-block;
+        }
+
+        .icon-shoucang3 {
+            display: none;
+        }
+
+        &.current {
+            color: $baike-blue;
+
+            .icon-dianzan {
+                display: none;
+            }
+    
+            .icon-dianzan2 {
+                display: inline-block;
+            }
+
+            .icon-shoucang {
+                display: none;
+            }
+    
+            .icon-shoucang3 {
+                display: inline-block;
+            }
+        }
+    }
+}

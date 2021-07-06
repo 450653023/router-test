@@ -1,0 +1,62 @@
+@import '../base/mixin';
+@import '../base/variable';
+
+.main {
+    background: #ffffff;
+
+    .main_hd {
+        position: relative;
+
+        .play-lg {
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    .main_bd {
+        position: relative;
+        box-sizing: border-box;
+        padding: 18px 24px 20px 24px;
+
+        .title {
+            font-size: 24px;
+            color: $text01;
+            font-family: PingFangSC-Medium;
+        }
+
+        .author {
+            font-size: 12px;
+            margin-top: 12px;
+            color: $text02;
+        }
+
+        .time {
+            font-size: 12px;
+            margin-top: 4px;
+            color: $text03;
+        }
+
+        &:after {
+            @include setBottomLine(rgba(0,0,0,0.08));
+            left: 24px;
+            right: 24px;
+        }
+    }
+
+    .main_ft {
+        box-sizing: border-box;
+        padding: 16px 24px 20px 24px;
+
+        .content {
+            @include ellipsis-lines(4);
+            font-size: 17px;
+            line-height: 1.75;
+            text-align: justify;
+            color: $text02;
+        }
+    }
+}

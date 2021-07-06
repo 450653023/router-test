@@ -1,0 +1,42 @@
+@import '../base/mixin';
+@import '../base/variable';
+
+.related-videos {
+    padding-top: 16px;
+    padding-bottom: 0;
+    background: #ffffff;
+    box-sizing: border-box;
+
+    .mod-title {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .videos-items {
+        width: 100vw;
+        overflow-x: auto;
+        white-space: nowrap;
+        box-sizing: border-box;
+        padding: 16px 24px 20px 24px;
+
+        .videos-item {
+            width: calc(315px/2);
+            height: calc(175px/2);
+            display: inline-block;
+
+            &.leftspace {
+                margin-left: 12px;
+            }
+
+            .videos-item-name {
+                font-size: 14px;
+                margin-top: 12px;
+                color: $text02;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
