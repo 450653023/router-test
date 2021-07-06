@@ -4,7 +4,7 @@
       @click="clickPraise">
       <i class="iconfont icon-dianzan"></i>
       <i class="iconfont icon-dianzan2"></i>
-      <span>有帮助</span>
+      <span>主页</span>
     </div>
     <div class="menu-item" v-bind:class="{ current: isClickCollect }"
       @click="clickCollect">
@@ -14,7 +14,7 @@
     </div>
     <div class="menu-item" @click="clickShare">
       <i class="iconfont icon-fenxiang"></i>
-      <span>分享</span>
+      <span>个人中心</span>
     </div>
   </div>
 </template>
