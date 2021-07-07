@@ -1,10 +1,9 @@
 import Vue from 'vue';
-import App from './App.vue';
-import './assets/css/base/reset.scss';
-import './assets/css/base/safe-area.scss';
-
-Vue.config.productionTip = false
+import App from './App';
+import router from './router';
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  el: '#app',    //这里绑定的是index.html中的id为app的div元素
+  router,
+  render: h => h(App)
+})

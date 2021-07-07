@@ -1,41 +1,31 @@
 <template>
   <div id="app">
-    <div class="page-qq-baike">
-      <MainContent />
-      <BottomMenu :onClickShare="showShare" :words="msg" />
+    <router-view></router-view>
+    <div class="bottom-menu">
+      <router-link class="menu-item" to="/PageOne">PageOne</router-link>
+      <router-link class="menu-item" to="/PageTwo">PageTwo</router-link>
     </div>
   </div>
 </template>
 
 <script>
-import MainContent from "./components/MainContent.vue";
-import BottomMenu from "./components/BottomMenu.vue";
-
 export default {
-  name: "App",
-  data() {
-    return {
-      showModal: false,
-      msg: '测试'
-    }
-  },
-  components: {
-    MainContent,
-    BottomMenu
-  },
-  methods: {
-    showShare() {
-      this.showModal = true;
-    },
-    closeModal() {
-      this.showModal = false;
-    }
-  }
+  name: "App"
 };
 </script>
 
-<style lang="scss" scoped>
-@import "./assets/css/font/font.scss";
-@import "./assets/css/base/mixin.scss";
-@import "./assets/css/pages/qq-baike.scss";
+<style>
+.bottom-menu {
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  position: fixed;
+}
+
+.menu-item {
+  flex: 1;
+  padding: 14px;
+  text-align: center;
+  border: 1px solid red;
+}
 </style>
